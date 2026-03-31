@@ -16,6 +16,72 @@ hr {
   display: none;
 } /* rimuove l'elemento */
 
+/* punto 5 */
+/*ICONE*/
+
+ion-icon {
+  font-size: 30px;
+  color: blue;
+  vertical-align: middle;
+  position: relative;
+  bottom: 10px;
+  right: 15px;
+}
+
+/* icona viola */
+.fixedIcon ion-icon {
+  color: orangered;
+}
+
+/*BOTTONI*/
+
+.buttonIcon,
+.fixedIcon {
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 2px solid white;
+  width: 30px;
+  height: 60px;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+}
+
+/*GRUPPO ICONE (mobile) */
+
+.iconGroup {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+}
+
+.iconGroup .buttonIcon {
+  display: block;
+  margin-top: 10px;
+}
+
+.fixedIcon {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+}
+
+/* MEDIA QUERY (>700px) */
+
+@media screen and (min-width: 700px) {
+  /* i blu salgono al centro */
+  .iconGroup {
+    top: 50%;
+    bottom: auto;
+    transform: translateY(-50%);
+  }
+
+  .fixedIcon {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+  }
+}
 /* HEADER */
 header {
   background: rgb(0, 160, 198);
@@ -148,7 +214,6 @@ h1 + p {
   color: #a0a0a0;
 }
 
-/* general */
 /* punto 1 */
 .clearfix img {
   float: left;
@@ -158,6 +223,7 @@ h1 + p {
 .important {
   position: relative;
   z-index: 1;
+  white-space: nowrap;
 }
 
 .underline {
@@ -227,7 +293,6 @@ h1 + p {
   }
 }
 @media screen and (min-width: 900px) {
-
   .box h2 {
     position: absolute;
     bottom: 100px;
@@ -456,4 +521,16 @@ footer a {
   .toTop {
     display: none;
   }
+}
+
+
+/* punto 9: tag */
+.tagContainer {
+  position: relative;
+}
+
+.tagContainer ion-icon {
+  position: absolute;
+  bottom: 90px;
+  color: darkgrey;
 }
